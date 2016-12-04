@@ -237,10 +237,10 @@ var getNearTypesWithGeo = function(types, lat, lng, dll, size, callback, order) 
 	filter(?type=<http://odp.jig.jp/odp/1.0#TourSpot> || ?type=<http://purl.org/jrrk#CivicPOI> || ?type=<http://purl.org/jrrk#EmergencyFacility>)
 	*/
 	
-	if (!order)
-		order = "order by rand()";
 //	if (!order)
-//		order = "";
+//		order = "order by rand()";
+	if (!order)
+		order = "";
 	q = q.replace(/\$ORDER\$/g, order);
 	q = q.replace(/\$SIZE\$/g, size);
 //	q = q.replace(/\$TYPE\$/g, type);
